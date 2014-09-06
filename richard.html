@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<!-- Esto trae el css para darle formato, color, transparencia, etc al gráfico. Pueden probar elimando esta línea-->
+		<link rel="stylesheet" href="https://rawgit.com/tpreusse/radar-chart-d3/master/src/radar-chart.css">
+		
+		<!-- Esto trae el javascript de la libreria d3, que el código para generar el gráfico de radar necesita -->
+		<script src="http://d3js.org/d3.v3.js"></script>
+		
+		<!-- Esto trae el javascript para generar el gráfico de radar -->
+		<script src="https://rawgit.com/tpreusse/radar-chart-d3/master/src/radar-chart.js"></script>
+
+		<script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
+		<script src="http://code.highcharts.com/highcharts.js"></script>
+		<script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+	</head>
+
+	<body>
+
+	<p>Facebook ID</p>
+	<input id="fbid" type="text">
+	<p>Token</p>
+	<input id="token" type="text">
+	<button type="button" onclick="generatePlot()">Enviar</button>
+	<h2 id = "nombre"></h2>
+	<div id = "edad"></div>
+	<h2>Foto Perfil</h2>
+	<div id = "foto-perfil"></div>
+	<!-- Esto carga el código escrito en javascript.js. Aquí le pediremos la información a Facebook y generaremos el gráfico -->
+	<script src="javascript.js"></script>
+	<h2>"Graficos"</h2>
+	<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+	<input type="button" id="btnPieChart" value="Pie Chart" />
+	</body>
+
+</html>
